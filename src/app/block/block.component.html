@@ -1,0 +1,6 @@
+<h4>I'm a block component</h4>
+<p>Does this block has image? {{ hasImage() }}</p>
+
+
+<p>Can you add a new block? <span [innerText]="allowNewBlock"></span></p>
+<button class="button" [disabled]="!allowNewBlock" (click)="console($event)">Add new block</button>

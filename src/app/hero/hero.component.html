@@ -1,0 +1,10 @@
+<div class="hero is-dark">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Type to search for a photo on unsplash</h1>
+      <app-search (results)="displayResults( $event )"></app-search>
+    </div>
+  </div>
+</div>
+
+<app-card-list *ngIf="results" [results]="results"></app-card-list>
