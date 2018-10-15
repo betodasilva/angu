@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TempdataService } from '../tempdata.service';
 
 @Component({
   selector: 'app-hero',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   results: any;
-  constructor() { }
+  constructor(public tempData: TempdataService) { }
 
   ngOnInit() {
   }
