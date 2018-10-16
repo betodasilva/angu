@@ -3,8 +3,3 @@
     <input type="text" [(ngModel)]="query" [debounce]="500" (onDebounce)="search( $event )" placeholder="Find the perfect picture for you" class="input is-rounded">
   </div>
 </div>
-<div class="field">
-  <div class="control">
-    <p class="is-size-7"><span class="has-text-grey">query: {{ queryUrl }}</span><span class="has-text-grey-lighter">{{ query }}</span></p>
-  </div>
-</div>

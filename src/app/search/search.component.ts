@@ -11,7 +11,7 @@ import { TempdataService } from '../tempdata.service';
 
 export class SearchComponent implements OnInit {
 
-  
+  query: string = null;
   
   @Output() results: EventEmitter<Object> = new EventEmitter();
 
@@ -23,9 +23,7 @@ export class SearchComponent implements OnInit {
   }
 
   search( query: any ) {
-    // this.tempData.query = query;
-    // this.options.params.query = query;    
-    // let obs = this.http.get( this.queryUrl, this.options );
+    
     this.tempData.getPhotos( query ).subscribe( (data: any) => {   
       this.tempData.imageList = data.results;
       this.results.emit( data.results );
