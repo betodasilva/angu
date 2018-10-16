@@ -7,7 +7,7 @@ import { TempdataService } from '../tempdata.service';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-  results: any = Array<Object>;
+  results: any = Array<Object>();
   loaded: boolean = false;
   constructor(public tempData: TempdataService) { }
 
