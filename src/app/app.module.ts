@@ -14,6 +14,7 @@ import { CardListComponent } from './card-list/card-list.component';
 import { TempdataService } from './tempdata.service';
 import { RouterModule, Routes } from '@angular/router';
 import { ImagedetailComponent } from './imagedetail/imagedetail.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: 'image/:id',      component: ImagedetailComponent },
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false } // <-- debugging purposes only

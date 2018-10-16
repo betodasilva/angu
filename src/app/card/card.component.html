@@ -1,8 +1,8 @@
-<div class="card">
+<div class="card" [@cardLoaded]="state">
   <div class="card-image">
     <figure class="image is-4by3" *ngIf="result">
       <a [routerLink]="['/image', result.id]">
-        <img src="{{ result.urls.small }}">
+        <img src="{{ result.urls.small }}" (load)="changeStateOnImageLoad()">
       </a>
     </figure>
   </div>

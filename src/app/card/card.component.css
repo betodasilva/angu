@@ -1,3 +1,8 @@
 .card-image img {
     object-fit: cover;
 }
+
+.card {
+    transform: translateY(-10px);
+    opacity: 0;
+}
