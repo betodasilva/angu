@@ -7,4 +7,16 @@
   </div>
 </div>
 
-<app-card-list *ngIf="results" [results]="results"></app-card-list>
+<app-card-list *ngIf="results.length > 0 && loaded === true" [results]="results"></app-card-list>
+
+<div class="container" *ngIf="results.length === 0 && loaded === true">
+  <div class="columns is-centered">
+      <div class="column">
+        <br>
+        <br>
+        <h2  class="title">
+          No results found.
+        </h2>
+      </div>
+  </div>
+</div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap, NavigationStart } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { TempdataService } from '../tempdata.service';
+import { Location } from '@angular/common';
+
 
 
 @Component({
@@ -16,7 +18,8 @@ export class ImagedetailComponent implements OnInit {
   constructor( 
     private route: ActivatedRoute,
     private router: Router,
-    public tempData: TempdataService ) { }
+    public tempData: TempdataService,
+    private location: Location ) { }
 
   ngOnInit() {
     
@@ -31,11 +34,12 @@ export class ImagedetailComponent implements OnInit {
       } );
     }
 
-                  
+    console.log( this.image );
   }
 
   closeModal(){
     document.querySelector('.modal').classList.remove('is-active');
+    this.location.back();
   }
 
 

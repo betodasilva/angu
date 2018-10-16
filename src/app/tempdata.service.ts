@@ -25,8 +25,8 @@ export class TempdataService {
 
   getPhoto( id: string ) {
     this.options.params.query = "";
-    this.queryUrl = `https://api.unsplash.com/photos/${id}`;
-    return this.http.get( this.queryUrl, this.options );
+    let iqueryUrl = `https://api.unsplash.com/photos/${id}`;
+    return this.http.get( iqueryUrl, this.options );
   }
 
 }

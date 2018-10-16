@@ -7,7 +7,8 @@ import { TempdataService } from '../tempdata.service';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit {
-  results: any;
+  results: any = Array<Object>;
+  loaded: boolean = false;
   constructor(public tempData: TempdataService) { }
 
   ngOnInit() {
@@ -15,6 +16,7 @@ export class HeroComponent implements OnInit {
 
   displayResults( results ) {
     this.results = results;
+    this.loaded = true;
   }
 
 }
